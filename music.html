@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>music • sophie’s webzone</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="crt">
+  <header class="site-header">
+    <h1>💿 playlist</h1>
+    <nav class="tabs">
+      <a href="/index.html">home</a>
+      <a href="/videos.html">videos</a>
+      <a href="/learn.html">weird stuff</a>
+      <a href="/blog.html">blog</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="win">
+      <div class="titlebar"><span>Player</span></div>
+      <div class="content">
+        <div id="playerUI" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <button id="prev" class="btn">⏮︎</button>
+          <button id="play" class="btn">▶︎</button>
+          <button id="next" class="btn">⏭︎</button>
+          <div id="trackTitle" style="font-weight:700;">—</div>
+          <div style="flex:1"></div>
+          <div id="time">0:00 / 0:00</div>
+        </div>
+        <input id="seek" type="range" min="0" max="100" value="0" style="width:100%; margin-top:8px;">
+        <audio id="player" preload="metadata"></audio>
+      </div>
+    </section>
+
+    <section class="win">
+      <div class="titlebar"><span>Playlist</span></div>
+      <div class="content">
+        <ol id="playlist" class="list"></ol>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/player.js"></script>
+</body>
+</html>

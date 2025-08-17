@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sophie’s Animal Enclosure</title>
+  <link rel="icon" href="/assets/img/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="crt">
+
+  <header class="site-header">
+    <h1>✨ sophie’s animal enclosure ✨</h1>
+    <nav class="tabs">
+      <a href="/music.html">music</a>
+      <a href="/videos.html">videos</a>
+      <a href="/learn.html">weird stuff i’m learning</a>
+      <a href="/blog.html">blog</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="intro win">
+      <div class="titlebar"><span>My Computer</span></div>
+      <div class="content">
+        <p>welcome to my chaotic corner of the internet. pls enjoy sparkles, pixels, and unhinged media recs.</p>
+        <button id="musicToggle" class="btn">▶︎ music on</button>
+      </div>
+    </section>
+
+    <section class="updates win">
+      <div class="titlebar"><span>Now Playing</span></div>
+      <div class="content">
+        <div id="nowPlaying">—</div>
+        <a class="btn" href="/music.html">open full playlist</a>
+      </div>
+    </section>
+
+    <section class="guestbook win">
+      <div class="titlebar"><span>Guestbook</span></div>
+      <div class="content">
+        <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="name" placeholder="screen name" required>
+          <textarea name="message" placeholder="say hi!"></textarea>
+          <button class="btn">sign</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- background audio (starts on first interaction) -->
+  <audio id="bgAudio" src="/assets/audio/theme.mp3" preload="auto" loop></audio>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
