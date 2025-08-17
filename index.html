@@ -55,18 +55,25 @@
       <ul id="trackList" class="tracklist95 list" aria-label="Track list"></ul>
     </section>
 
-    <!-- Guestbook (compact module) -->
-    <section class="guestbook win" id="guestbook" aria-label="Guestbook">
-      <div class="titlebar"><span>Guestbook</span></div>
-      <div class="content">
+    <!-- Scrapbook computer with guestbook inside the screen -->
+    <figure id="computerGuestbook" class="cutout-computer">
+        <img
+        class="computer-img"
+        src="/assets/img/cutouts/computer.svg" 
+        alt="vintage beige computer"
+        >
+    
+        <!-- the screen area -->
+        <div class="screen-slot crt-lite">
         <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST" class="guest-form">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder="screen name" required class="field" aria-label="Screen name">
-          <textarea name="message" placeholder="say hi!" class="field" aria-label="Message"></textarea>
-          <button class="btn" type="submit">sign</button>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="screen name" required class="field" aria-label="Screen name">
+            <textarea name="message" placeholder="say hi!" class="field" aria-label="Message"></textarea>
+            <button class="btn" type="submit">sign</button>
         </form>
-      </div>
-    </section>
+        </div>
+    </figure>
+  
 
     <!-- (add more modules here later: videos, learn, blog, etc.) -->
 
