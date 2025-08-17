@@ -20,19 +20,36 @@
   </header>
 
   <main class="wrap">
-    <section class="intro win">
-      <div class="titlebar"><span>My Computer</span></div>
-      <div class="content">
-        <p>welcome to my chaotic corner of the internet. pls enjoy sparkles, pixels, and unhinged media recs.</p>
-        <button id="musicToggle" class="btn">▶︎ music on</button>
-      </div>
-    </section>
+    
 
-    <section class="updates win">
-      <div class="titlebar"><span>Now Playing</span></div>
-      <div class="content">
-        <div id="nowPlaying">—</div>
-        <a class="btn" href="/music.html">open full playlist</a>
+    <!-- Win95 mini music player -->
+    <section class="win95 player95" id="homePlayerWin">
+      <div class="titlebar95">
+        <span class="title95">Music Player</span>
+        <div class="controls95" aria-hidden="true">
+          <button class="btn95 btn-min" title="Minimize">▁</button>
+          <button class="btn95 btn-close" title="Close">✕</button>
+        </div>
+      </div>
+
+      <div class="content95">
+        <img id="hpCover" class="cover95" src="/assets/img/cover1.jpg" alt="Album cover">
+        <div class="meta95">
+          <label>Artist</label>
+          <div id="hpArtist" class="field95">—</div>
+          <label>Track</label>
+          <div id="hpTitle" class="field95">—</div>
+        </div>
+
+        <div class="bar95">
+          <input id="hpSeek" type="range" min="0" max="100" value="0" aria-label="Seek">
+        </div>
+
+        <div class="controlsRow95">
+            <button id="hpPlay" type="button" class="btn95 bevel95" aria-label="Play/Pause">▶</button>
+            <button id="hpNext" type="button" class="btn95 bevel95" aria-label="Next">»</button>
+            
+        </div>
       </div>
     </section>
 
@@ -49,9 +66,11 @@
     </section>
   </main>
 
-  <!-- background audio (starts on first interaction) -->
-  <audio id="bgAudio" src="/assets/audio/theme.mp3" preload="auto" loop></audio>
+  <!-- single shared audio element (no duplicate, no second src) -->
+  <audio id="bgAudio" preload="auto" loop></audio>
 
+  <!-- scripts: playlist first, then main -->
+  <script src="/js/player-data.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
