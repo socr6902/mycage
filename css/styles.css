@@ -377,6 +377,43 @@
     font-size: 12px;
     cursor: pointer;
   }
+  /* clickable tracklist under the player */
+.tracklist95 {
+    margin: 6px 0 0;
+    padding: 0;
+    max-height: 160px;          /* scroll if long */
+    overflow: auto;
+    background: #d3d3d3;
+    border: 2px solid #808080;
+    box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #404040;
+    font-family: var(--pixel, monospace);
+    font-size: 12px;
+  }
+  
+  .tracklist95 li {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 8px;
+    border-bottom: 1px dashed #aaa;
+    cursor: pointer;
+  }
+  
+  .tracklist95 li:last-child { border-bottom: 0; }
+  
+  .tracklist95 li:hover { background: #c7c7c7; }
+  
+  .tracklist95 .num { width: 1.5em; text-align: right; opacity: .7; }
+  
+  .tracklist95 .title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  
+  .tracklist95 .artist { opacity: .8; }
+  
+  .tracklist95 li.active {
+    background: #b6c8e6;                 /* selected blue-ish */
+    box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #6b86b0;
+  }
+  
   
   
   /* ================================
