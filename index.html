@@ -11,7 +11,7 @@
 
   <header class="site-header">
     <h1>✨ sophie’s animal enclosure ✨</h1>
-    <nav class="tabs">
+    <nav class="tabs" aria-label="Site">
       <a href="/music.html">music</a>
       <a href="/videos.html">videos</a>
       <a href="/learn.html">weird stuff i’m learning</a>
@@ -19,26 +19,26 @@
     </nav>
   </header>
 
-  <main class="wrap">
-    
+  <!-- Responsive desktop grid container -->
+  <main class="desktop wrap">
 
     <!-- Win95 mini music player -->
-    <section class="win95 player95" id="homePlayerWin">
+    <section class="win95 player95" id="homePlayerWin" aria-label="Music Player">
       <div class="titlebar95">
         <span class="title95">Music Player</span>
         <div class="controls95" aria-hidden="true">
-          <button class="btn95 btn-min" title="Minimize">▁</button>
-          <button class="btn95 btn-close" title="Close">✕</button>
+          <button class="btn95 btn-min" type="button" title="Minimize">▁</button>
+          <button class="btn95 btn-close" type="button" title="Close">✕</button>
         </div>
       </div>
 
       <div class="content95">
         <img id="hpCover" class="cover95" src="/assets/img/cover1.jpg" alt="Album cover">
         <div class="meta95">
-          <label>Artist</label>
-          <div id="hpArtist" class="field95">—</div>
-          <label>Track</label>
-          <div id="hpTitle" class="field95">—</div>
+          <label for="hpArtist">Artist</label>
+          <div id="hpArtist" class="field95" role="textbox" aria-readonly="true">—</div>
+          <label for="hpTitle">Track</label>
+          <div id="hpTitle" class="field95" role="textbox" aria-readonly="true">—</div>
         </div>
 
         <div class="bar95">
@@ -46,27 +46,32 @@
         </div>
 
         <div class="controlsRow95">
-            <button id="hpPlay" type="button" class="btn95 bevel95" aria-label="Play/Pause">▶</button>
-            <button id="hpNext" type="button" class="btn95 bevel95" aria-label="Next">»</button>
-            
+          <button id="hpPlay" type="button" class="btn95 bevel95" aria-label="Play/Pause">▶</button>
+          <button id="hpNext" type="button" class="btn95 bevel95" aria-label="Next">»</button>
+          <!-- optional time readout:
+          <div id="hpTime" class="time95">0:00 / 0:00</div> -->
         </div>
       </div>
     </section>
 
-    <section class="guestbook win">
+    <!-- Guestbook (compact module) -->
+    <section class="guestbook win" id="guestbook" aria-label="Guestbook">
       <div class="titlebar"><span>Guestbook</span></div>
       <div class="content">
-        <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST">
+        <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST" class="guest-form">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="name" placeholder="screen name" required>
-          <textarea name="message" placeholder="say hi!"></textarea>
-          <button class="btn">sign</button>
+          <input type="text" name="name" placeholder="screen name" required class="field" aria-label="Screen name">
+          <textarea name="message" placeholder="say hi!" class="field" aria-label="Message"></textarea>
+          <button class="btn" type="submit">sign</button>
         </form>
       </div>
     </section>
+
+    <!-- (add more modules here later: videos, learn, blog, etc.) -->
+
   </main>
 
-  <!-- single shared audio element (no duplicate, no second src) -->
+  <!-- single shared audio element -->
   <audio id="bgAudio" preload="auto" loop></audio>
 
   <!-- scripts: playlist first, then main -->
