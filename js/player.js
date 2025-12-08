@@ -19,6 +19,7 @@
     const $ = id => document.getElementById(id);
     const els = {
       play:   $('hpPlay'),
+      prev:   $('hpPrev'),
       next:   $('hpNext'),
       seek:   $('hpSeek'),
       time:   $('hpTime'),      // optional
@@ -35,7 +36,6 @@
   
     let i = 0;         // current index
     let seeking = false;
-    let kicked = false;
   
     const fmt = s => (!isFinite(s) ? "0:00" : `${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`);
   
@@ -73,6 +73,7 @@
       if (els.artist) els.artist.textContent = t.artist || '—';
       if (els.title)  els.title.textContent  = t.title  || '—';
       window.setNowPlaying?.(`${t.title} — ${t.artist}`);
+      window.updateNotepad?.(t.title, t.artist);
       highlightActive();
       if (DEBUG) console.log('load()', i, t.src);
     }
@@ -81,6 +82,9 @@
       if (A.paused) {
         if (els.play) els.play.textContent = '❚❚'; // optimistic
         A.play().catch(()=>{});
+        // Update notepad with current track
+        const t = list[i];
+        window.updateNotepad?.(t.title, t.artist);
       } else {
         if (els.play) els.play.textContent = '▶';
         A.pause();
@@ -94,22 +98,16 @@
       A.play().catch(()=>{});
       requestAnimationFrame(setLabel);
     }
-  
-    // Single autoplay kicker (first user interaction)
-    const kick = () => {
-      if (!kicked){
-        A.play().catch(()=>{});
-        kicked = true;
-      }
-      setLabel();
-      window.removeEventListener('click', kick);
-      window.removeEventListener('keydown', kick);
-    };
-    window.addEventListener('click', kick);
-    window.addEventListener('keydown', kick);
+
+    function prev(){
+      load(i - 1);
+      A.play().catch(()=>{});
+      requestAnimationFrame(setLabel);
+    }
   
     // === Wire controls ===
     els.play?.addEventListener('click', playPause);
+    els.prev?.addEventListener('click', prev);
     els.next?.addEventListener('click', next);
   
     // Tracklist interactions

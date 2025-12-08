@@ -270,6 +270,11 @@
     max-width:500px;
     font-size:12px;
   }
+
+  /* Video player should be wider */
+  #videoPlayerWin {
+    max-width: 100%;
+  }
   
   .titlebar95{
     background: var(--w95-blue);           /* was #345573 */
@@ -337,6 +342,24 @@
     border:1px solid var(--w95-dark);
   }
   #hpSeek::-moz-range-thumb{
+    width:10px; height:12px;
+    background:#aab6c3;
+    border:1px solid var(--w95-dark);
+  }
+
+  /* Video player seek bar - same styling */
+  #vpSeek{
+    width:100%; height:4px; -webkit-appearance:none; appearance:none;
+    background:#d7dde3;
+    border:1px solid var(--w95-border);
+  }
+  #vpSeek::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:10px; height:12px;
+    background:#aab6c3;
+    border:1px solid var(--w95-dark);
+  }
+  #vpSeek::-moz-range-thumb{
     width:10px; height:12px;
     background:#aab6c3;
     border:1px solid var(--w95-dark);
@@ -409,14 +432,20 @@
     
   
   /* place modules side-by-side on wider screens */
-  @media (min-width: 900px) {
+  @media (min-width: 1100px) {
     .desktop {
       grid-template-columns: repeat(12, minmax(70px, 1fr));
       align-items: start;
     }
   
     /* music player on the left */
-    #homePlayerWin { grid-column: 1 / span 6; }
+    #homePlayerWin { grid-column: 1 / span 5; }
+
+    /* video player on the right - bigger */
+    #videoPlayerWin { grid-column: 6 / span 7; }
+
+    /* notepad below, full width */
+    #notepadWin { grid-column: 1 / span 12; }
   
   }
   
@@ -497,3 +526,66 @@
     #computerGuestbook{ grid-column: 7 / span 6; }
   }
   
+  /* Video layout matches music layout */
+.video-grid95 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 10px;
+  align-items: start;
+}
+
+/* Faux “screen” */
+.video-screen95 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 2px solid var(--w95-border);
+  box-shadow:
+    inset 2px 2px 0 var(--w95-sunken),
+    inset -2px -2px 0 #fff;
+  grid-column: 1 / -1;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.video-screen95 video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Responsive: on wider screens for video player */
+@media (min-width: 520px) {
+  .video-grid95 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .video-screen95 {
+    grid-column: 1 / -1; /* still span full width */
+  }
+}
+
+/* ================================
+   NOTEPAD
+   ================================ */
+.notepad-content {
+  background: #fff;
+  border: 2px solid var(--w95-border);
+  box-shadow: 
+    inset 1px 1px 0 #ddd,
+    2px 2px 0 #000;
+  padding: 12px;
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: var(--ui);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.notepad-header {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--w95-border);
+  margin-bottom: 8px;
+}

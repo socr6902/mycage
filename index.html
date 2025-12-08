@@ -46,8 +46,9 @@
         </div>
 
         <div class="controlsRow95">
+          <button id="hpPrev" type="button" class="btn95 bevel95" aria-label="Previous">⏮</button>
           <button id="hpPlay" type="button" class="btn95 bevel95" aria-label="Play/Pause">▶</button>
-          <button id="hpNext" type="button" class="btn95 bevel95" aria-label="Next">»</button>
+          <button id="hpNext" type="button" class="btn95 bevel95" aria-label="Next">⏭</button>
           <!-- optional time readout:
           <div id="hpTime" class="time95">0:00 / 0:00</div> -->
         </div>
@@ -56,14 +57,14 @@
     </section>
 
     <!-- Scrapbook computer with guestbook inside the screen -->
-    <figure id="computerGuestbook" class="cutout-computer">
+    <!-- <figure id="computerGuestbook" class="cutout-computer">
         <img
         class="computer-img"
         src="/assets/img/cutouts/computer.svg" 
         alt="vintage beige computer"
         >
     
-        <!-- the screen area -->
+
         <div class="screen-slot crt-lite">
         <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST" class="guest-form">
             <input type="hidden" name="_captcha" value="false">
@@ -72,10 +73,76 @@
             <button class="btn" type="submit">sign</button>
         </form>
         </div>
-    </figure>
+    </figure> -->
   
 
     <!-- (add more modules here later: videos, learn, blog, etc.) -->
+
+    <section class="win95 player95" id="videoPlayerWin" aria-label="Video Player">
+  <div class="titlebar95">
+    <span class="title95">Video Player</span>
+    <div class="controls95" aria-hidden="true">
+      <button class="btn95 btn-min" type="button">▁</button>
+      <button class="btn95 btn-close" type="button">✕</button>
+    </div>
+  </div>
+
+  <div class="content95 video-grid95">
+    <!-- SCREEN -->
+    <div class="video-screen95 crt-lite">
+      <iframe 
+        id="vpYouTube" 
+        width="100%" 
+        height="100%" 
+        src="" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- META -->
+    <div class="meta95">
+      <label for="vpTitle">Title</label>
+      <div id="vpTitle" class="field95">—</div>
+      <label for="vpDesc">Desc</label>
+      <div id="vpDesc" class="field95">—</div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="controlsRow95" style="grid-column: 1 / -1;">
+      <button id="vpPrev" class="btn95 bevel95" aria-label="Previous">⏮</button>
+      <button id="vpNext" class="btn95 bevel95" aria-label="Next">⏭</button>
+    </div>
+  </div>
+
+  <!-- VIDEO LIST -->
+  <ul id="videoList" class="tracklist95 list"></ul>
+</section>
+
+<!-- Notepad Window -->
+<section class="win95" id="notepadWin" aria-label="Notepad">
+  <div class="titlebar95">
+    <span class="title95">Notepad</span>
+    <div class="controls95" aria-hidden="true">
+      <button class="btn95 btn-min" type="button">▁</button>
+      <button class="btn95 btn-close" type="button">✕</button>
+    </div>
+  </div>
+
+  <div class="content95" style="display:block; padding:12px;">
+    <div class="notepad-header">
+      <div id="notepadTitle" style="font-family:var(--pixel, monospace); font-size:12px; font-weight:700; margin-bottom:4px;">
+        No media playing
+      </div>
+    </div>
+    <div id="notepadContent" class="notepad-content">
+      <p style="opacity:0.6; font-style:italic;">Play a song or video to see notes...</p>
+    </div>
+  </div>
+</section>
+
 
   </main>
 
@@ -85,6 +152,8 @@
   <!-- scripts: playlist first, then main -->
   <script src="/js/player-data.js"></script>
   <script src="/js/player.js"></script>
+  <script src="/js/videos.js"></script>
+  <script src="/js/blog.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
