@@ -56,28 +56,29 @@
       <ul id="trackList" class="tracklist95 list" aria-label="Track list"></ul>
     </section>
 
-    <!-- Scrapbook computer with guestbook inside the screen -->
-    <!-- <figure id="computerGuestbook" class="cutout-computer">
-        <img
-        class="computer-img"
-        src="/assets/img/cutouts/computer.svg" 
-        alt="vintage beige computer"
-        >
-    
-
-        <div class="screen-slot crt-lite">
-        <form action="https://formsubmit.co/sophiavcrawshaw@gmail.com" method="POST" class="guest-form">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" name="name" placeholder="screen name" required class="field" aria-label="Screen name">
-            <textarea name="message" placeholder="say hi!" class="field" aria-label="Message"></textarea>
-            <button class="btn" type="submit">sign</button>
-        </form>
+    <!-- Notepad Window -->
+    <section class="win95" id="notepadWin" aria-label="Notepad">
+      <div class="titlebar95">
+        <span class="title95">Notepad</span>
+        <div class="controls95" aria-hidden="true">
+          <button class="btn95 btn-min" type="button">▁</button>
+          <button class="btn95 btn-close" type="button">✕</button>
         </div>
-    </figure> -->
-  
+      </div>
 
-    <!-- (add more modules here later: videos, learn, blog, etc.) -->
+      <div class="content95" style="display:block; padding:12px;">
+        <div class="notepad-header">
+          <div id="notepadTitle" style="font-family:var(--pixel, monospace); font-size:12px; font-weight:700; margin-bottom:4px;">
+            No media playing
+          </div>
+        </div>
+        <div id="notepadContent" class="notepad-content">
+          <p style="opacity:0.6; font-style:italic;">Play a song or video to see notes...</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Video Player -->
     <section class="win95 player95" id="videoPlayerWin" aria-label="Video Player">
   <div class="titlebar95">
     <span class="title95">Video Player</span>
@@ -119,28 +120,6 @@
 
   <!-- VIDEO LIST -->
   <ul id="videoList" class="tracklist95 list"></ul>
-</section>
-
-<!-- Notepad Window -->
-<section class="win95" id="notepadWin" aria-label="Notepad">
-  <div class="titlebar95">
-    <span class="title95">Notepad</span>
-    <div class="controls95" aria-hidden="true">
-      <button class="btn95 btn-min" type="button">▁</button>
-      <button class="btn95 btn-close" type="button">✕</button>
-    </div>
-  </div>
-
-  <div class="content95" style="display:block; padding:12px;">
-    <div class="notepad-header">
-      <div id="notepadTitle" style="font-family:var(--pixel, monospace); font-size:12px; font-weight:700; margin-bottom:4px;">
-        No media playing
-      </div>
-    </div>
-    <div id="notepadContent" class="notepad-content">
-      <p style="opacity:0.6; font-style:italic;">Play a song or video to see notes...</p>
-    </div>
-  </div>
 </section>
 
 

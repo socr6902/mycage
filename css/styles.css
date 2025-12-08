@@ -434,18 +434,28 @@
   /* place modules side-by-side on wider screens */
   @media (min-width: 1100px) {
     .desktop {
-      grid-template-columns: repeat(12, minmax(70px, 1fr));
+      grid-template-columns: repeat(2, 1fr); /* two equal columns */
       align-items: start;
+      gap: 16px;
     }
   
-    /* music player on the left */
-    #homePlayerWin { grid-column: 1 / span 5; }
+    /* music player - left column, row 1 */
+    #homePlayerWin { 
+      grid-column: 1;
+      grid-row: 1;
+    }
 
-    /* video player on the right - bigger */
-    #videoPlayerWin { grid-column: 6 / span 7; }
+    /* notepad - left column, row 2, tight to music player */
+    #notepadWin { 
+      grid-column: 1;
+      grid-row: 2;
+    }
 
-    /* notepad below, full width */
-    #notepadWin { grid-column: 1 / span 12; }
+    /* video player - right column, spans both rows */
+    #videoPlayerWin { 
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
   
   }
   
