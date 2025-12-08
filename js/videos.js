@@ -15,8 +15,8 @@ const videos = [
     youtubeId: "Ck0jwS0CvKk"
   },
   {
-    title: "Test Video",
-    desc: "testing if this works on live site",
+    title: "The Last Belle",
+    desc: "Cartoon",
     youtubeId: "ja1sjfnfjg0"
   }
   // Add more videos here
