@@ -36,6 +36,7 @@
     background: var(--bg);
     color: var(--ink);
     overflow-x: hidden; /* prevent horizontal scroll */
+    min-height: 100vh; /* ensure body covers full viewport */
   }
   
   body {
@@ -49,11 +50,12 @@
      ================================ */
   .crt {
     position: relative;
+    min-height: 100vh; /* ensure crt covers full viewport */
   }
   
-  /* .crt::after {
+  .crt::after {
     content: "";
-    position: absolute;
+    position: fixed; /* fixed so it covers viewport even when scrolling */
     inset: 0;
     pointer-events: none;
     background: repeating-linear-gradient(
@@ -64,7 +66,8 @@
       transparent 4px
     );
     mix-blend-mode: multiply;
-  } */
+    z-index: 9999; /* on top of everything */
+  }
   
   /* ================================
      HEADER + NAV TABS
@@ -430,7 +433,7 @@
         display: grid;
         gap: 16px;
         grid-template-columns: 1fr; /* stack on mobile */
-        padding: 12px; /* add padding on mobile */
+        padding: 16px; /* even padding on all sides */
         max-width: 100%;
         overflow-x: hidden;
     }
