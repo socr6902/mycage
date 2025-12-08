@@ -272,8 +272,15 @@
     background: var(--w95-chrome);         /* was var(--paper) */
     box-shadow:4px 4px 0 var(--w95-shadow);/* was #5c5c5c */
     width: 100%;
-    max-width:500px;
+    max-width: 100%; /* allow full shrinking on mobile */
     font-size:12px;
+  }
+
+  /* Desktop: limit width */
+  @media (min-width: 520px) {
+    .win95 {
+      max-width: 500px;
+    }
   }
 
   /* Video player should be wider */
@@ -433,7 +440,7 @@
         display: grid;
         gap: 16px;
         grid-template-columns: 1fr; /* stack on mobile */
-        padding: 16px 20px 16px 16px; /* extra padding on right for box shadows */
+        padding: 16px; /* even padding on all sides */
         max-width: 100%;
         overflow-x: hidden;
     }
