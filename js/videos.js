@@ -10,14 +10,19 @@ const videoList = document.getElementById("videoList");
 // your videos - use YouTube video IDs
 const videos = [
   {
-    title: "The Cat Came Back",
+    title: "The Cat Came Back (2015)",
     desc: "Cartoon",
     youtubeId: "Ck0jwS0CvKk"
   },
   {
-    title: "The Last Belle",
+    title: "The Last Belle (2011)",
     desc: "Cartoon",
     youtubeId: "ja1sjfnfjg0"
+  },
+  {
+    title: "To Be (2016)",
+    desc: "Cartoon",
+    youtubeId: "ocgFkHElzgQ"
   }
   // Add more videos here
   // TIP: Videos from these sources usually allow embedding:
