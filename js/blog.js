@@ -3,7 +3,7 @@ const MEDIA_NOTES = {
   // Music notes (use the track title as the key)
   "All Flowers In Time Bend Towards The Sun": {
     artist: "Jeff Buckley & Elizabeth Fraser",
-    note: "This song is ethereal and haunting. The way their voices blend together is just magical. Makes me think of foggy mornings and bittersweet memories."
+    note: "This is love i think. This song is unreleased but was leaked after Jeffs' death against the wishes of Elizabeth. It reminds me of all the music that i'd love but will never hear. If heaven is real, there's a way for me to hear them all."
   },
   "Fake Plastic Trees": {
     artist: "Radiohead",
