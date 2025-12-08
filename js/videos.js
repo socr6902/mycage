@@ -44,15 +44,7 @@ const videos = [
     desc: "Short Horror Film",
     youtubeId: "iLJNSD3H5sg"
   }
-  // Add more videos here
-  // TIP: Videos from these sources usually allow embedding:
-  // - Creative Commons licensed videos
-  // - Official music videos from major labels
-  // - Educational channels (TED, Crash Course, etc.)
-  // - Many gaming/tech channels
-  // 
-  // If a video doesn't work, try finding it on the official channel
-  // or look for re-uploads that allow embedding
+
 ];
 
 let currentIndex = 0;
