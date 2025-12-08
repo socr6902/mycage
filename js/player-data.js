@@ -6,12 +6,6 @@ window.PLAYLIST = [
       cover: "./assets/img/all-flowers-in-time.jpg" 
     },
     {
-        title: "Fake Plastic Trees",
-        artist: "Radiohead",
-        src: "./assets/audio/fake-plastic-trees.mp3",
-        cover: "./assets/img/fake-plastic-trees.png" 
-    },
-    {
         title: "Charlie on the MTA",
         artist: "Kingston Trio",
         src: "./assets/audio/MTA.mp3",
@@ -22,6 +16,18 @@ window.PLAYLIST = [
         artist: "Bleachers ft. Bruce Springsteen",
         src: "./assets/audio/chinatown.mp3",
         cover: "./assets/img/chinatown.jpg" 
+    },
+    {
+        title: "Fake Plastic Trees",
+        artist: "Radiohead",
+        src: "./assets/audio/fake-plastic-trees.mp3",
+        cover: "./assets/img/fake-plastic-trees.png" 
+    },
+    {
+        title: "Gagging Order",
+        artist: "Radiohead",
+        src: "./assets/audio/gagging-order.mp3",
+        cover: "./assets/img/gagging-order.jpeg" 
     },
     {
         title: "Merry Christmas, Please Dont Call",

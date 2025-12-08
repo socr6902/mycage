@@ -11,7 +11,7 @@ const MEDIA_NOTES = {
   },
 
   // Video notes (use the video title as the key)
-  "Sample Video 1": {
+  "The Cat Came Back (2015)": {
     note: "aesthetic clips that capture a certain vibe. Love the colors and composition."
   },
   "Sample Video 2": {
@@ -28,19 +28,18 @@ window.updateNotepad = function(title, artist = null) {
 
   const mediaInfo = MEDIA_NOTES[title];
   
+  // Update title (always show artist for music)
+  if (artist) {
+    notepadTitle.textContent = `${title} — ${artist}`;
+  } else {
+    notepadTitle.textContent = `${title}`;
+  }
+  
+  // Update content
   if (mediaInfo) {
-    // Update title
-    if (artist) {
-      notepadTitle.textContent = `♪ ${title} — ${artist}`;
-    } else {
-      notepadTitle.textContent = `📹 ${title}`;
-    }
-    
-    // Update content
     notepadContent.innerHTML = `<p>${mediaInfo.note}</p>`;
   } else {
     // No notes found
-    notepadTitle.textContent = title;
     notepadContent.innerHTML = `<p style="opacity:0.6; font-style:italic;">No notes for this media yet...</p>`;
   }
 };
