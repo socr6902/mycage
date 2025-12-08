@@ -13,6 +13,11 @@ const videos = [
     title: "The Cat Came Back",
     desc: "Cartoon",
     youtubeId: "Ck0jwS0CvKk"
+  },
+  {
+    title: "Test Video",
+    desc: "testing if this works on live site",
+    youtubeId: "ja1sjfnfjg0"
   }
   // Add more videos here
   // TIP: Videos from these sources usually allow embedding:
