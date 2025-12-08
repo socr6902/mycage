@@ -433,7 +433,7 @@
         display: grid;
         gap: 16px;
         grid-template-columns: 1fr; /* stack on mobile */
-        padding: 16px; /* even padding on all sides */
+        padding: 16px 20px 16px 16px; /* extra padding on right for box shadows */
         max-width: 100%;
         overflow-x: hidden;
     }
