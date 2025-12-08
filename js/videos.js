@@ -23,6 +23,26 @@ const videos = [
     title: "To Be (2016)",
     desc: "Cartoon",
     youtubeId: "ocgFkHElzgQ"
+  },
+  {
+    title: "Silly Symphony Hell's Bells (1929)",
+    desc: "Cartoon",
+    youtubeId: "AvK6vOyAmSQ"
+  },
+  {
+    title: "Trick or Treat (1956)",
+    desc: "Cartoon",
+    youtubeId: "aSkXw1bk_NE"
+  },
+  {
+    title: "Inside Out (2012)",
+    desc: "Cartoon",
+    youtubeId: "LOLFW67JWeU"
+  },
+  {
+    title: "POSSIBLY IN MICHIGAN (1983)",
+    desc: "Short Horror Film",
+    youtubeId: "iLJNSD3H5sg"
   }
   // Add more videos here
   // TIP: Videos from these sources usually allow embedding:
