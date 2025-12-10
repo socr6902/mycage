@@ -130,8 +130,44 @@
   <ul id="videoList" class="tracklist95 list"></ul>
 </section>
 
-
   </main>
+
+  <!-- 🎞️ VHS WALL - Mystery tape collection -->
+  <section class="vhs-section">
+    <div class="vhs-wall">
+      <!-- Add your tapes here with YouTube video IDs -->
+      <div class="vhs-tape" data-youtube-id="Ck0jwS0CvKk"></div>
+      <div class="vhs-tape" data-youtube-id="ja1sjfnfjg0"></div>
+      <div class="vhs-tape" data-youtube-id="ocgFkHElzgQ"></div>
+      <div class="vhs-tape" data-youtube-id="dQw4w9WgXcQ"></div>
+      <div class="vhs-tape" data-youtube-id="dQw4w9WgXcQ"></div>
+      <div class="vhs-tape" data-youtube-id="dQw4w9WgXcQ"></div>
+      <!-- Keep adding tapes... -->
+    </div>
+  </section>
+
+  <!-- Win95-style VHS Player popup -->
+  <div id="vhsPlayer" class="vhs-player-modal hidden">
+    <div class="win95 vhs-player-window">
+      <div class="titlebar95">
+        <span class="title95">📼 VHS Player</span>
+        <div class="controls95">
+          <button class="btn95 btn-close" id="vhsClose" type="button">✕</button>
+        </div>
+      </div>
+      <div class="vhs-player-content">
+        <iframe 
+          id="vhsFrame" 
+          width="100%" 
+          height="100%" 
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- single shared audio element -->
   <audio id="bgAudio" preload="auto" loop></audio>
@@ -156,5 +192,6 @@
   <script src="./js/videos.js?v=2"></script>
   <script src="./js/blog.js?v=2"></script>
   <script src="./js/main.js?v=2"></script>
+  <script src="./js/tapes.js"></script>
 </body>
 </html>
