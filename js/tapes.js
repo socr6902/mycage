@@ -1,14 +1,14 @@
-// 🎞️ VHS Tape Wall - Click to play mystery videos
+// 🎞️ VHS Tape Wall - Click play button to open mystery videos
 
-const tapes = document.querySelectorAll('.vhs-tape');
+const playButtons = document.querySelectorAll('.vhs-play-btn');
 const playerModal = document.getElementById('vhsPlayer');
 const playerFrame = document.getElementById('vhsFrame');
 const closeBtn = document.getElementById('vhsClose');
 
-// Click tape to open player
-tapes.forEach(tape => {
-  tape.addEventListener('click', () => {
-    const youtubeId = tape.dataset.youtubeId;
+// Click play button to open player
+playButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const youtubeId = button.dataset.youtubeId;
     const embedUrl = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
     
     playerFrame.src = embedUrl;
