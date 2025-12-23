@@ -34,7 +34,7 @@ const videoCategories = [
       },
       {
         title: "YEBBA - My Mind | Sofar NYC",
-        desc: "Music Video",
+        desc: "Live Music",
         youtubeId: "RXwE1G7_U9M"
       }
     ]
@@ -140,12 +140,12 @@ const videoCategories = [
     videos: [
       {
         title: "To Be or Not To Be — Andrew Scott",
-        desc: "Misc",
+        desc: "Live Performance",
         youtubeId: "q6CLdCl9TB0"
       },
       {
         title: "Dostoyevsky's Notes From The Underground — Larry Cedar",
-        desc: "Misc",
+        desc: "Live Performance",
         youtubeId: "asp5tqDql0g"
       }
     ]
