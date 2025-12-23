@@ -7,7 +7,11 @@ const MEDIA_NOTES = {
   },
   "Charlie on the MTA": {
     artist: "Kingston Trio",
-    note: "Absolute pinnacle of nostalgia. It reminds me of the songs you hear in your head when you take too much Benadryl."
+    note: "Pure nostalgia. It reminds me of the songs you hear in your head when you take too much Benadryl."
+  },
+  "About You": {
+    artist: "The 1975",
+    note: "This song is so romantic it makes me sick. I'll miss you on the Amtrak from Boston to New York. I never know what to think about, I think about you."
   },
   "Chinatown — Live at Electric Lady": {
     artist: "Bleachers ft. Bruce Springsteen",
@@ -15,12 +19,12 @@ const MEDIA_NOTES = {
   },
   "Fake Plastic Trees": {
     artist: "Radiohead",
-    note: "IF I COULD BE WHO YOU WANTED, ALL THE TIME. "
+    note: "If i could be who you wanted, all the time. "
   },
-  "Gagging Order": {
-    artist: "Radiohead",
-    note: "Different from Radiohead's usual sound, i love it."
-  },
+  // "Gagging Order": {
+  //   artist: "Radiohead",
+    
+  // },
   "Merry Christmas, Please Dont Call": {
     artist: "Bleachers",
     note: "I've heard it said that there is intimacy in never speaking again. I disagree. Merry Christmas, please dont call.   "
@@ -36,7 +40,7 @@ const MEDIA_NOTES = {
 
   // Video notes (use the video title as the key)
   "The Cat Came Back (2015)": {
-    note: "aesthetic clips that capture a certain vibe. Love the colors and composition."
+    note: "I find myself singing this lil tune a bunch. The cat came back and he just wouldn't go away!"
   },
   "Sample Video 2": {
     note: "more stuff that I find interesting. Need to add more context here."

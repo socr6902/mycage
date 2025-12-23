@@ -12,6 +12,12 @@ window.PLAYLIST = [
         cover: "./assets/img/MTA.jpg" 
     },
     {
+        title: "About You",
+        artist: "The 1975",
+        src: "./assets/audio/about-you.mp3",
+        cover: "./assets/img/about-you.jpg" 
+    },
+    {
         title: "Chinatown — Live at Electric Lady",
         artist: "Bleachers ft. Bruce Springsteen",
         src: "./assets/audio/chinatown.mp3",
