@@ -42,8 +42,11 @@ const MEDIA_NOTES = {
   "The Cat Came Back (2015)": {
     note: "I find myself singing this lil tune a bunch. The cat came back and he just wouldn't go away!"
   },
-  "Sample Video 2": {
-    note: "more stuff that I find interesting. Need to add more context here."
+  "Bleachers — Merry Christmas, Please Don't Call | The Tonight Show": {
+    note: "It absolutely is that serious. This is the ONLY acceptable form of christmas music."
+  },
+  "The Goo Goo Dolls — Iris (Live in Buffalo, NY, 7/4/2004) ": {
+    note: "Music used to FEEL LIKE THIS. Then phones came along and people forgot how to appreciate anything if not through a screen. Fucking losers put your phone away during concerts. "
   }
 };
 
